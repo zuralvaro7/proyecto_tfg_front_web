@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/css.css">
-    </head>
+</head>
+
 <body>
 
     <div class="login-container">
-        <form action="" method="post" class="login-form">
+        <form action="api/v1/tfg" method="post" class="login-form">
             <label for="inputUser" class="form-label">Nombre de usuario</label>
             <input type="text" class="form" id="inputUser">
             <span class="error" id="nombre_usuario_error"></span>
+
+            <label for="inputEmail" class="form-label">Correo electrónico</label>
+            <input type="email" class="form" id="inputEmail">
+            <span class="error" id="email_error"></span>
+
 
             <label for="inputPassword" class="form-label">Contraseña</label>
             <input type="password" class="form" id="inputPassword">
             <span class="error" id="contrasena_error"></span>
 
-            <button type="button" onclick="login()" class="btn">Enviar</button>
-            <a href="registro.html" class="register-link">¿No tienes una cuenta? Regístrate aquí</a>
+            <button type="button" onclick="registro()" class="btn">Enviar</button>
+            <a href="login.html" class="login-link">¿Ya tienes una cuenta? Inicia sesión aquí</a>
         </form>
-        
     </div>
 
     <script src="js/js.js"></script>
 </body>
+
 </html>
