@@ -1,4 +1,3 @@
-
 async function registro(){
     let username = document.getElementById('inputUser').value;
     let email = document.getElementById('inputEmail').value;
@@ -7,7 +6,7 @@ async function registro(){
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Accept': 'application/json'
+            'Accept': 'application/json;charset=UTF-8'
         },
         body: JSON.stringify({
             "nombre_usuario": username,
@@ -32,9 +31,11 @@ async function registro(){
             }
         });
     } else {
-        cookieStore.set('username', username);
-        cookieStore.set('email', email);
-        cookieStore.set('password', password);
+        localStorage.setItem('id_usuario', resultado.id);
+        localStorage.setItem('nombre_usuario', resultado.nombre_usuario);
+        localStorage.setItem('email', resultado.email);
+        localStorage.setItem('contrasena', resultado.contrasena);
+        window.location.href= 'index.html';
     }
 }
 
@@ -46,7 +47,7 @@ async function login(){
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Accept': 'application/json'
+            'Accept': 'application/json;charset=UTF-8'
         },
         body: JSON.stringify({
             "nombre_usuario": username,
@@ -70,8 +71,11 @@ async function login(){
             }
         });
     } else {
-        cookieStore.set('username', response.nombre_usuario);
-        cookieStore.set('email', response.email);
-        cookieStore.set('password', response.contrasena);
+        localStorage.setItem('id_usuario', resultado.id_usuario);
+        localStorage.setItem('nombre_usuario', resultado.nombre_usuario);
+        localStorage.setItem('email', resultado.email);
+        localStorage.setItem('contrasena', resultado.contrasena);
+        window.location.href= 'index.html';
     }
+
 }

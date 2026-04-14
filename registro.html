@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <div class="login-container">
+    <div class="container login-container">
         <form action="api/v1/tfg" method="post" class="login-form">
             <label for="inputUser" class="form-label">Nombre de usuario</label>
             <input type="text" class="form" id="inputUser">
@@ -25,12 +25,12 @@
             <input type="password" class="form" id="inputPassword">
             <span class="error" id="contrasena_error"></span>
 
-            <button type="button" onclick="registro()" class="btn">Enviar</button>
+            <button type="button" onclick="registro()" class="btn" id="enviar-registro">  Enviar</button>
             <a href="login.html" class="login-link">¿Ya tienes una cuenta? Inicia sesión aquí</a>
         </form>
     </div>
 
-    <script src="js/js.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
