@@ -31,7 +31,7 @@ async function registro(){
             }
         });
     } else {
-        localStorage.setItem('id_usuario', resultado.id);
+        localStorage.setItem('id_usuario', resultado.id_usuario);
         localStorage.setItem('nombre_usuario', resultado.nombre_usuario);
         localStorage.setItem('email', resultado.email);
         localStorage.setItem('contrasena', resultado.contrasena);

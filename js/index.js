@@ -20,15 +20,21 @@ async function cargarHistorial() {
         window.location.href = 'login.html';
     } else {
         resultado.forEach(datos => {
-            document.querySelectorAll(".tabla").forEach(el => {
-                el.appendChild(document.createElement("tr")).classList.add("linea");
-                datos.forEach(dato => {
-                    el.appendChild(document.createElement("td")).innerHTML = dato;
+            document.querySelectorAll(".tbody").forEach(el => {
+                tr = document.createElement("tr");
+                for(let i = 1; i < datos.length-1; i++) {
+                    td = document.createElement("td");
+                    if(i==1){
+                        td.scope = "row";
+                        td.innerHTML = parseDate(datos[i]);
+                        tr.appendChild(td).classList.add("ps-3");
+                    } else{
+                        td.innerHTML = parseDate(datos[i]);
+                        tr.appendChild(td).classList.add("text-center");
+                    }
+                }
 
-
-
-                })
-
+                el.appendChild(tr);
                 console.log(datos);
             });
         });
@@ -36,3 +42,27 @@ async function cargarHistorial() {
 }
 
 window.onload = cargarHistorial();
+
+
+
+
+/**
+ * Dar formato a la siguiente fecha 2025-06-14
+ */
+function parseDate(dateString){
+    try {
+        dateStringC = dateString.split('-');
+        if (dateStringC.length > 2) {
+            return dateStringC[2]+"-"+dateStringC[1]+"-"+dateStringC[0];
+        }else {
+            return dateString;
+        }
+    }catch(e){
+        console.error(e);
+        return dateString;
+    }
+}
+
+if(localStorage.getItem('id_usuario')==null){
+    window.location.href = 'login.html';
+}

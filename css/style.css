@@ -2,49 +2,11 @@
 body {
     background-color: #f0f2f5;
 }
-.container {
-    margin: 6vh auto;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    display: flex;
-    flex-direction: column;
-    /*align-items: center;*/
-}
-
-.tabla{
-    border-collapse: collapse;
-    border: 1px solid;
-}
-.encabezado, .contenido{
-    border: 1px solid black;
-}
-
-.login-container{
-    margin: 0;
-    height: 100vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-form {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px #0000009a;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 200px;
-}
 
 .error{
     color: red;
     display: none;
 }
-
-
-
 
 
 /* X-Small devices (portrait phones, less than 576px)*/
