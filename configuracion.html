@@ -37,15 +37,26 @@
                 <div class="mb-3">
                     <label for="inputUser" class="form-label">Nombre de usuario</label>
                     <input type="text" class="form-control border border-secondary" id="inputUser" disabled>
+                    <span class="error" id="nombre_usuario_error"></span>
                 </div>
 
                 <div class="mb-4">
                     <label for="inputEmail" class="form-label">Correo electrónico</label>
                     <input type="email" class="form-control border border-secondary" id="inputEmail" disabled>
+                    <span class="error" id="email_error"></span>
                 </div>
 
 
-                <input type="button" value="Eliminar"      class="col-12 mb-4 border border-danger text-danger" onclick="borrar()">
+                <input type="button" class="col-12 mt-5 mb-5 border border-danger text-danger" id="editar" value="Editar">
+                <div class="row justify-content-around" id="btns-edicion">
+
+                        <input type="button" class="col-4 mt-5 mb-5 border" id="cancelar" value="Cancelar">
+                        <input type="button" class="col-4 mt-5 mb-5 border " id="guardar" value="Guardar">
+
+                </div>
+
+
+                <input type="button" value="Eliminar" class="col-12 mb-4 border border-danger text-danger" onclick="borrar()">
                 <input type="button" value="Cerrar Sesion" class="col-12 border border-danger text-danger" id="cerrar-sesion">
             </form>
         </div>

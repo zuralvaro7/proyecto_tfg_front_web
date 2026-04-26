@@ -1,3 +1,8 @@
+if(localStorage.getItem('id_usuario')==null){
+    window.location.href = 'login.html';
+}
+
+
 async function cargarHistorial() {
     let response = await fetch(`http://localhost:8080/api/v1/tfg/historial`, {
         method: 'POST',
@@ -63,6 +68,3 @@ function parseDate(dateString){
     }
 }
 
-if(localStorage.getItem('id_usuario')==null){
-    window.location.href = 'login.html';
-}

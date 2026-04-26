@@ -1,3 +1,8 @@
+if(localStorage.getItem('id_usuario')!=null){
+    window.location.href = 'index.html';
+}
+
+
 async function registro(){
     let username = document.getElementById('inputUser').value;
     let email = document.getElementById('inputEmail').value;
@@ -79,3 +84,5 @@ async function login(){
     }
 
 }
+
+
