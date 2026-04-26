@@ -65,8 +65,6 @@ async function guardar(){
 }
 
 
-document.getElementById('guardar').addEventListener('click', guardar)
-
 document.getElementById('cerrar-sesion').addEventListener('click', () => {
     localStorage.clear()
     window.location.href = 'login.html'
@@ -96,10 +94,7 @@ function cancelar(){
     user.value =  localStorage.getItem('nombre_usuario');
     email.value =  localStorage.getItem('email');
 
-    document.querySelectorAll("[id$='_error']").forEach(el => {
-        el.textContent = "";
-        el.style.display = 'none'
-    })
+
 
     document.getElementById('cancelar').style.display = 'none';
     document.getElementById('guardar').style.display = 'none';

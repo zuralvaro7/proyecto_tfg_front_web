@@ -1,6 +1,6 @@
-if(localStorage.getItem('id_usuario')==null){
-    window.location.href = 'login.html';
-}
+// if(localStorage.getItem('id_usuario')==null){
+//     window.location.href = 'login.html';
+// }
 
 
 async function cargarHistorial() {
@@ -31,24 +31,25 @@ async function cargarHistorial() {
                     td = document.createElement("td");
                     if(i==1){
                         td.scope = "row";
-                        td.innerHTML = parseDate(datos[i]);
+                        td.innerHTML = datos[1];
                         tr.appendChild(td).classList.add("ps-3");
-                    } else{
-                        td.innerHTML = parseDate(datos[i]);
+                    } else if(i==3) {
+                        td.innerHTML = parseDate(datos[3]);
+                        tr.appendChild(td).classList.add("ps-3");
+                        tr.appendChild(td).classList.add("text-center");
+                    }else {
+                        td.innerHTML = datos[i];
                         tr.appendChild(td).classList.add("text-center");
                     }
                 }
 
                 el.appendChild(tr);
-                console.log(datos);
             });
         });
     }
 }
 
 window.onload = cargarHistorial();
-
-
 
 
 /**
