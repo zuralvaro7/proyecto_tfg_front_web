@@ -1,6 +1,6 @@
-// if(localStorage.getItem('id_usuario')==null){
-//     window.location.href = 'login.html';
-// }
+if(localStorage.getItem('id_usuario')==null){
+     window.location.href = 'login.html';
+}
 
 
 async function cargarHistorial() {
