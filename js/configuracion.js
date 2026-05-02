@@ -94,7 +94,10 @@ function cancelar(){
     user.value =  localStorage.getItem('nombre_usuario');
     email.value =  localStorage.getItem('email');
 
-
+    document.querySelectorAll("[id$='_error']").forEach(el => {
+        el.textContent = "";
+        el.style.display = 'none'
+    });
 
     document.getElementById('cancelar').style.display = 'none';
     document.getElementById('guardar').style.display = 'none';
