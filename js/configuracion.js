@@ -24,7 +24,7 @@ async function borrar(){
 
 async function guardar(){
     const id= parseInt(localStorage.getItem('id_usuario'));
-    let response = await fetch(`http://localhost:8080/api/v1/tfg/${id}`, {
+    let response = await fetch(`https://poryecto-tfg-api.onrender.com/api/v1/tfg/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',

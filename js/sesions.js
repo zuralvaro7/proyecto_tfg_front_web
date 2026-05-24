@@ -7,7 +7,7 @@ async function registro(){
     let username = document.getElementById('inputUser').value;
     let email = document.getElementById('inputEmail').value;
     let password = document.getElementById('inputPassword').value;
-    let response = await fetch('http://localhost:8080/api/v1/tfg', {
+    let response = await fetch('https://poryecto-tfg-api.onrender.com/api/v1/tfg', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ async function registro(){
 async function login(){
     let username = document.getElementById('inputUser').value;
     let password = document.getElementById('inputPassword').value;
-    let response = await fetch('http://localhost:8080/api/v1/tfg/login', {
+    let response = await fetch('https://poryecto-tfg-api.onrender.com/api/v1/tfg/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

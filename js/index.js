@@ -4,7 +4,7 @@ if(localStorage.getItem('id_usuario')==null){
 
 
 async function cargarHistorial() {
-    let response = await fetch(`http://localhost:8080/api/v1/tfg/historial`, {
+    let response = await fetch(`https://poryecto-tfg-api.onrender.com/api/v1/tfg/historial`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
