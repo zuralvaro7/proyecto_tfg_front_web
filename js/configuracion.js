@@ -9,7 +9,7 @@ document.getElementById('guardar').onclick = guardar;
 
 async function borrar(){
     const id= localStorage.getItem('id_usuario')
-    let response = await fetch("http://localhost:8080/api/v1/tfg/"+id, {
+    let response = await fetch("https://poryectotfgapi-production.up.railway.app/api/v1/tfg/"+id, {
         method: 'DELETE'
     })
 
@@ -24,7 +24,7 @@ async function borrar(){
 
 async function guardar(){
     const id= parseInt(localStorage.getItem('id_usuario'));
-    let response = await fetch(`https://poryecto-tfg-api.onrender.com/api/v1/tfg/${id}`, {
+    let response = await fetch(`https://poryectotfgapi-production.up.railway.app/api/v1/tfg/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
