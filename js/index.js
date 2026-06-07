@@ -4,18 +4,13 @@ if(localStorage.getItem('id_usuario')==null){
 
 
 async function cargarHistorial() {
-    let response = await fetch(`https://poryectotfgapi-production.up.railway.app/api/v1/tfg/historial`, {
-        method: 'POST',
+    const id = localStorage.getItem('id_usuario');
+    let response = await fetch(`https://poryectotfgapi-production.up.railway.app/api/v1/tfg/historial/${id}`, {
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json;charset=UTF-8'
-        },
-        body: JSON.stringify({
-            "id_usuario": localStorage.getItem('id_usuario'),
-            "nombre_usuario": localStorage.getItem("nombre_usuario"),
-            "contrasena": localStorage.getItem('contrasena'),
-            "email": localStorage.getItem('email'),
-        })
+        }
     })
     try{
         const resultado = await response.json();
