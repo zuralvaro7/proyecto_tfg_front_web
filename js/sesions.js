@@ -37,11 +37,11 @@ async function registro(){
             }
         });
     } else {
-        window.location.href= 'index.html';
         localStorage.setItem('id_usuario', resultado.id_usuario);
         localStorage.setItem('nombre_usuario', resultado.nombre_usuario);
         localStorage.setItem('email', resultado.email);
         localStorage.setItem('contrasena', resultado.contrasena);
+        window.location.href= '/index.html';
     }
 }
 
@@ -81,7 +81,7 @@ async function login(){
         localStorage.setItem('nombre_usuario', resultado.nombre_usuario);
         localStorage.setItem('email', resultado.email);
         localStorage.setItem('contrasena', resultado.contrasena);
-        window.location.href= 'index.html';
+        window.location.href= '/index.html';
     }
 
 }
