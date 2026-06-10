@@ -1,8 +1,6 @@
 if(localStorage.getItem('id_usuario')==null){
     window.location.href = 'login.html';
 }
-const api = 'https://poryectotfgapi-production.up.railway.app'
-
 
 
 document.getElementById('inputUser').value = localStorage.getItem('nombre_usuario');

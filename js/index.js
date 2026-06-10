@@ -1,7 +1,6 @@
 if(localStorage.getItem('id_usuario')==null){
      window.location.href = 'login.html';
 }
-const api = 'https://poryectotfgapi-production.up.railway.app'
 
 
 async function cargarHistorial() {
