@@ -1,13 +1,14 @@
 if(localStorage.getItem('id_usuario')!=null){
     window.location.href = 'index.html';
 }
+const api = 'https://poryectotfgapi-production.up.railway.app'
 
 
 async function registro(){
     let username = document.getElementById('inputUser').value;
     let email = document.getElementById('inputEmail').value;
     let password = document.getElementById('inputPassword').value;
-    let response = await fetch('https://poryectotfgapi-production.up.railway.app/api/v1/tfg', {
+    let response = await fetch(api+'/api/v1/tfg', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -48,7 +49,7 @@ async function registro(){
 async function login(){
     let username = document.getElementById('inputUser').value;
     let password = document.getElementById('inputPassword').value;
-    let response = await fetch('https://poryectotfgapi-production.up.railway.app/api/v1/tfg/login', {
+    let response = await fetch(api+'/api/v1/tfg/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -1,11 +1,12 @@
 if(localStorage.getItem('id_usuario')==null){
      window.location.href = 'login.html';
 }
+const api = 'https://poryectotfgapi-production.up.railway.app'
 
 
 async function cargarHistorial() {
     const id = localStorage.getItem('id_usuario');
-    let response = await fetch(`https://poryectotfgapi-production.up.railway.app/api/v1/tfg/historial/${id}`, {
+    let response = await fetch(api+'/api/v1/tfg/historial/'+id, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

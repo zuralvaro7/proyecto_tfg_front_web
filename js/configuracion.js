@@ -1,6 +1,9 @@
 if(localStorage.getItem('id_usuario')==null){
     window.location.href = 'login.html';
 }
+const api = 'https://poryectotfgapi-production.up.railway.app'
+
+
 
 document.getElementById('inputUser').value = localStorage.getItem('nombre_usuario');
 document.getElementById('inputEmail').value = localStorage.getItem('email');
@@ -9,7 +12,7 @@ document.getElementById('guardar').onclick = guardar;
 
 async function borrar(){
     const id= localStorage.getItem('id_usuario')
-    let response = await fetch("https://poryectotfgapi-production.up.railway.app/api/v1/tfg/"+id, {
+    let response = await fetch(api+"/api/v1/tfg/"+id, {
         method: 'DELETE'
     })
 
@@ -24,7 +27,7 @@ async function borrar(){
 
 async function guardar(){
     const id= parseInt(localStorage.getItem('id_usuario'));
-    let response = await fetch(`https://poryectotfgapi-production.up.railway.app/api/v1/tfg/${id}`, {
+    let response = await fetch(api+'/api/v1/tfg/'+id, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
