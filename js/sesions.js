@@ -1,6 +1,8 @@
 if(localStorage.getItem('id_usuario')!=null){
     window.location.href = 'index.html';
 }
+const api = 'https://poryectotfgapi-production.up.railway.app'
+// const api = 'http://localhost:8080'
 
 async function registro(){
     let username = document.getElementById('inputUser').value;

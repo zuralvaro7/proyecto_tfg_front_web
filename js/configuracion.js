@@ -1,6 +1,8 @@
 if(localStorage.getItem('id_usuario')==null){
     window.location.href = 'login.html';
 }
+const api = 'https://poryectotfgapi-production.up.railway.app'
+// const api = 'http://localhost:8080'
 
 
 document.getElementById('inputUser').value = localStorage.getItem('nombre_usuario');
@@ -103,4 +105,5 @@ function cancelar(){
     document.getElementById('cancelar').style.display = 'none';
     document.getElementById('guardar').style.display = 'none';
 }
+const api = 'https://poryectotfgapi-production.up.railway.app'
 
