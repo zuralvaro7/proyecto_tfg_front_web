@@ -105,5 +105,4 @@ function cancelar(){
     document.getElementById('cancelar').style.display = 'none';
     document.getElementById('guardar').style.display = 'none';
 }
-const api = 'https://poryectotfgapi-production.up.railway.app'
 
